@@ -1,5 +1,6 @@
 <script setup lang="js">
 
+import Product_swiper from "./components/global/sections/Product_swiper.vue";
 </script>
 
 <template>
