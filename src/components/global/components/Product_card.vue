@@ -14,7 +14,7 @@ console.log(card_hit,card_discount)//почему не находит элеме
 
 <template>
     <div class="card">
-      <img class="card__image" src="/src/public/1card.png" alt="Фото драм-картриджа">
+      <img class="card__image" src="/src/public/1card.png" alt="Фото драм-картриджа"> <!--не могу поставить в src константу-->
       <div class="card__additional_info">
         <span id="card__hit">{{hit}}</span>
         <span id="card__discount">{{discount}}</span>
