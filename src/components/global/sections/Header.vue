@@ -81,14 +81,16 @@ const button2 = "Прайс-лист Опт";
 }
 .header__info{
   display: flex;
-  gap: 60px;
+  width: 402px;
+  justify-content: space-between;
 }
 .header__info-item{
   text-decoration: none;
 }
 .header__social-links{
   display: flex;
-  gap: 32px;
+  width: 170px;
+  justify-content: space-between;
   align-items: center;
 }
 .header__download-buttons{
