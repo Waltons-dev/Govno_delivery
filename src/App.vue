@@ -4,6 +4,7 @@ import {useHead} from "@unhead/vue";
 import Product_swiper from "./components/global/sections/Product_swiper.vue";
 import Catalogue from "./components/global/sections/Catalogue.vue";
 import Filter from "./components/global/sections/Filter.vue";
+import Hero from "./components/global/sections/Hero.vue";
 useHead({
   "link": [
   {
@@ -26,6 +27,7 @@ const swiper_names = {name1:"Хиты продаж", name2:"Новинки", nam
 
 <template>
   <Header></Header>
+  <Hero></Hero>
   <section class="filer-catalogue _container">
     <Filter class="filer-catalogue__filter"></Filter>
     <Catalogue class="filer-catalogue__catalogue"></Catalogue>
