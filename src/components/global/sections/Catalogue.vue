@@ -11,7 +11,7 @@ const pars8= {text:"Термо узлы и их комплектующие",src:
 </script>
 
 <template>
-  <article class="catalogue">
+  <section class="catalogue">
     <div class="catalogue__container">
       <div class="catalogue__header">
         <h3 class="catalogue__heading">Каталог</h3>
@@ -40,7 +40,7 @@ const pars8= {text:"Термо узлы и их комплектующие",src:
         </div>
       </div>
     </div>
-  </article>
+  </section>
 </template>
 
 <style scoped>

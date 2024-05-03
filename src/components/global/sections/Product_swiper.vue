@@ -16,7 +16,7 @@ const sw_name= defineProps(["swiper_name"])
 </script>
 
 <template>
-  <article class="swiper">
+  <section class="swiper">
     <div class="swiper__container _container">
       <div class="swiper__header">
         <h3 class="swiper__heading">{{swiper_name}}</h3>
@@ -51,7 +51,7 @@ const sw_name= defineProps(["swiper_name"])
         </li>
       </ul>
     </div>
-  </article>
+  </section>
 
 </template>
 

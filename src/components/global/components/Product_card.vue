@@ -4,7 +4,7 @@ const props = defineProps(["src","name","vendor","resource","price","hit","disco
 </script>
 
 <template>
-    <div class="card">
+    <article class="card">
       <img class="card__image" :src=src alt="Фото драм-картриджа">
       <div class="card__additional_info">
         <span v-if="hit" id="card__hit">ХИТ</span>
@@ -41,7 +41,7 @@ const props = defineProps(["src","name","vendor","resource","price","hit","disco
         </div>
         <button class="bin-button">В корзину</button>
       </div>
-    </div>
+    </article>
 </template>
 
 <style scoped>

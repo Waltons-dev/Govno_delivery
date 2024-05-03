@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <article class="filter">
+  <section class="filter">
     <div class="filter__container">
       <h3 class="filter__heading">Подбор картриджей</h3>
       <div class="filter__body">
@@ -22,11 +22,11 @@
           </button>
         </div>
         <form class="filter__form" action="">
-          <fieldset>
+          <fieldset class="form__main-fieldset">
             <legend style="display: none">Выбор картриджей</legend>
             <div class="form__container">
               <fieldset class="form__fieldset">
-                <legend>Тип производителя</legend>
+                <legend class="select__legend">Тип производителя</legend>
                 <select class="form_select form__maker">
                   <option value="hp">HP</option>
                   <option value="xerox">Xerox</option>
@@ -34,6 +34,7 @@
               </fieldset>
 
               <fieldset class="form__fieldset">
+                <legend class="select__legend">Тип принтера</legend>
                 <select class="form_select form__type">
                   <option disabled selected>Выберите тип принтера</option>
                   <option value="laser">Лазерный</option>
@@ -42,6 +43,7 @@
               </fieldset>
 
               <fieldset class="form__fieldset">
+                <legend class="select__legend">Картридж</legend>
                 <select class="form_select form__cartridge">
                   <option disabled selected>Выберите картридж</option>
                   <option value="qw">Че</option>
@@ -54,15 +56,20 @@
         </form>
       </div>
     </div>
-
-  </article>
+  </section>
 
 </template>
 
 <style scoped>
+.form__main-fieldset{
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
 .form__fieldset{
   padding-left: 18px;
-  border: 1px solid #D7D7D7
+  border: 1px solid #D7D7D7;
+  width: 100%;
 }
 .filter{
   width: 25%;
@@ -71,17 +78,20 @@
 .filter__container{
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  background-color: #F4F4F4;
 }
 .filter__heading{
   font-size: 24px;
   font-weight: 700;
   background-color: #F4F4F4;
-  padding-bottom: 20px;
+  gap: 20px;
 }
 .filter__body{
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 .filter__activities{
   display: flex;
@@ -121,7 +131,9 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 35px 0 35px 0;
+  padding: 35px 0 0 0;
+  max-height: 373px;
+  background-color: white;
 }
 .form__container{
   display: flex;
@@ -129,16 +141,21 @@
   align-items: center;
   justify-content: space-between;
   gap: 29px;
+  width: 100%;
 }
 .form_select{
-  width: 355px;
+  width: 100%;
   height: 54px;
   border-radius: 2px;
   font-weight: 500;
   font-size: 16px;
   outline: none;
 }
-
+.select__legend{
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #706F6F;
+}
 .form__button{
   background-color: #A78BFA;
   width: 180px;
