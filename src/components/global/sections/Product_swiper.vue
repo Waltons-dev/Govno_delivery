@@ -6,11 +6,11 @@ const params1 = {name:"Драм-картридж ФРОМБОАРД s-Line DK-11
 
 const params2 = {name:"Драм-картридж ФРОМБОАРД s-Line DK-1150 для Kyocera ECOSYS P2235, P2335",
   vendor:"DFKYEP2235040", resource: 100000, price: "3 656 ₽",
-  hit: false, discount:"-5%", src:"src/public/1card.png"}
+  hit: false, discount:"-5%", src:"src/public/2card.png"}
 
 const params3 = {name:"Драм-картридж ФРОМБОАРД s-Line DK-1150 для Kyocera ECOSYS P2235, P2335",
   vendor:"DFKYEP2235040", resource: 100000, price: "3 656 ₽",
-  hit: false, discount:"", src:"src/public/1card.png"}
+  hit: false, discount:"", src:"src/public/3card.png"}
 
 const sw_name= defineProps(["swiper_name"])
 </script>
