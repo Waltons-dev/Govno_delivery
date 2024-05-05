@@ -68,8 +68,9 @@ const pars8= {text:"Термо узлы и их комплектующие",src:
 }
 .catalogue__body-container{
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-template-rows: repeat(2,1fr);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr) );
+
+  //grid-template-rows: repeat(auto-fit,1fr);
   grid-gap: 20px;
 }
 </style>
