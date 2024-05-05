@@ -5,6 +5,8 @@ import Product_swiper from "./components/global/sections/Product_swiper.vue";
 import Catalogue from "./components/global/sections/Catalogue.vue";
 import Filter from "./components/global/sections/Filter.vue";
 import Hero from "./components/global/sections/Hero.vue";
+import Banners from "./components/global/sections/Banners.vue";
+import Sub_Hero from "./components/global/sections/Sub_Hero.vue";
 useHead({
   "link": [
   {
@@ -28,10 +30,12 @@ const swiper_names = {name1:"Хиты продаж", name2:"Новинки", nam
 <template>
   <Header></Header>
   <Hero></Hero>
+  <Sub_Hero></Sub_Hero>
   <section class="filer-catalogue _container">
     <Filter class="filer-catalogue__filter"></Filter>
     <Catalogue class="filer-catalogue__catalogue"></Catalogue>
   </section>
+  <Banners></Banners>
 
   <Product_swiper :swiper_name=swiper_names.name1></Product_swiper>
   <Product_swiper :swiper_name=swiper_names.name2></Product_swiper>
