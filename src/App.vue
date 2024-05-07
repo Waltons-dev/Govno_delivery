@@ -7,24 +7,30 @@ import Filter from "./components/global/sections/Filter.vue";
 import Hero from "./components/global/sections/Hero.vue";
 import Banners from "./components/global/sections/Banners.vue";
 import Sub_Hero from "./components/global/sections/Sub_Hero.vue";
+
 useHead({
   "link": [
-  {
-    "rel": "preconnect",
-    "href": "https://fonts.googleapis.com",
-  },
+    {
+      "rel": "preconnect",
+      "href": "https://fonts.googleapis.com",
+    },
     {
       "rel": "preconnect",
       "href": "https://fonts.gstatic.com",
-      "crossOrigin":"crossOrigin"
+      "crossOrigin": "crossOrigin"
     },
     {
       "rel": "stylesheet",
       "href": "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap",
     },
+    {
+      "rel": "stylesheet",
+      "href":"_normalize.scss"
+    }
   ]
 })
-const swiper_names = {name1:"Хиты продаж", name2:"Новинки", name3:"Акции"}
+const swiper_names = {name1: "Хиты продаж", name2: "Новинки", name3: "Акции"}
+
 </script>
 
 <template>
@@ -50,8 +56,6 @@ const swiper_names = {name1:"Хиты продаж", name2:"Новинки", nam
   padding: 0 15px;
 }
 * {
-  margin: 0;
-  padding: 0;
   border: 0;
   box-sizing: border-box;
   font-family:  "Lato", sans-serif;
@@ -61,5 +65,19 @@ const swiper_names = {name1:"Хиты продаж", name2:"Новинки", nam
   margin-bottom: 40px;
   gap: 20px;
 }
-
+//@media (max-width:1200px) {
+//  ._container{
+//    max-width: 970px;
+//  }
+//}
+//@media (max-width:992px) {
+//  ._container{
+//    max-width: 750px;
+//  }
+//}
+//@media (max-width:767px) {
+//  ._container{
+//    max-width: none;
+//  }
+//}
 </style>
