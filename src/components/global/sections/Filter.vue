@@ -27,7 +27,7 @@
             <div class="form__container">
               <fieldset class="form__fieldset">
                 <legend class="select__legend">Тип производителя</legend>
-                <select class="form_select form__maker">
+                <select class="form__select form__maker">
                   <option value="hp">HP</option>
                   <option value="xerox">Xerox</option>
                 </select>
@@ -35,7 +35,7 @@
 
               <fieldset class="form__fieldset">
                 <legend class="select__legend">Тип принтера</legend>
-                <select class="form_select form__type">
+                <select class="form__select form__type">
                   <option disabled selected>Выберите тип принтера</option>
                   <option value="laser">Лазерный</option>
                   <option value="matrix">Матричный</option>
@@ -44,7 +44,7 @@
 
               <fieldset class="form__fieldset">
                 <legend class="select__legend">Картридж</legend>
-                <select class="form_select form__cartridge">
+                <select class="form__select form__cartridge">
                   <option disabled selected>Выберите картридж</option>
                   <option value="qw">Че</option>
                   <option value="erx">Хз</option>
@@ -70,6 +70,7 @@
   padding-left: 18px;
   border: 1px solid #D7D7D7;
   width: 100%;
+  max-height: 63px;
 }
 .filter{
   width: 25%;
@@ -106,7 +107,6 @@
   width: 50%;
   padding-bottom: 20px;
 }
-
 .filter__printer-button{
   padding-top: 20px;
   --printer-svg-color:#A78BFA;
@@ -114,7 +114,6 @@
   background-color: white;
   cursor: pointer;
 }
-
 .filter__cartridge-button{
   padding-top: 36px;
   --cartridge-svg-color: #706F6F;
@@ -143,9 +142,9 @@
   gap: 29px;
   width: 100%;
 }
-.form_select{
+.form__select{
   width: 100%;
-  height: 54px;
+  height: 25px;
   border-radius: 2px;
   font-weight: 500;
   font-size: 16px;
@@ -167,5 +166,32 @@
   font-weight: 600;
   align-self: flex-end;
   margin-right: 40px;
+}
+@media (max-width: 1296px){
+  .filter{
+    width: 100%;
+  }
+  .filter__container{
+    gap: 5px;
+  }
+  .form__main-fieldset{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .filter__form{
+    overflow: hidden;
+  }
+  .form__button{
+    width: 75%;
+    align-self: center;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .form__select{
+    font-size: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
 }
 </style>

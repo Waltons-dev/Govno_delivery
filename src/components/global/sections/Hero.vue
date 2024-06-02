@@ -1,6 +1,7 @@
 <script setup>
 const src1 = "src/public/hero_img1.png";
 const src2 = "src/public/hero_img2.png";
+const src3 = "src/public/hero-adapt_img.png";
 </script>
 
 <template>
@@ -8,6 +9,7 @@ const src2 = "src/public/hero_img2.png";
     <div class="hero__container _container">
       <div class="hero__main">
         <img class="hero__main-img" :src=src1 alt="Картинка с текстом производим картриджи">
+        <img class="hero__adapt-img" :src=src3 alt="Картинка с текстом производим картриджи">
         <nav class="hero__nav">
           <input type="radio" name="point" id="hero__nav-el1" checked>
           <input type="radio" name="point" id="hero__nav-el2">
@@ -53,13 +55,11 @@ const src2 = "src/public/hero_img2.png";
 </template>
 
 <style scoped>
+.hero__adapt-img{
+  display: none;
+}
 .hero{
   margin-bottom: 20px;
-}
-._container{
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 .hero__container{
   display: grid;
@@ -91,8 +91,8 @@ const src2 = "src/public/hero_img2.png";
 }
 .hero__nav{
   position: absolute;
-  right: 40px;
-  bottom: 40px;
+  right: 3%;
+  bottom: 9%;
 }
 input[name="point"] {
   display: none;
@@ -111,5 +111,51 @@ input[name="point"] {
 .hero__nav-elements:hover{
   --hero__nav-svg-color:#A78BFA;
 }
+@media (max-width: 1296px){
+  .hero__container{
+    display: block;
+  }
+  .hero__side{
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 0;
+  }
 
+  .hero__side-img{
+    width: 49%;
+  }
+}
+@media (max-width: 769px){
+
+  .hero__side,.hero__main-img{
+    display: none;
+  }
+  .hero__container{
+    display: block;
+  }
+  .hero__adapt-img{
+    display: block;
+    width: 100%;
+    max-height: 80%;
+
+  }
+  .hero__nav{
+    margin-left: auto;
+    margin-right: auto;
+    width: 62%;
+  }
+  .nav__controls{
+    gap: 30px;
+  }
+  @media (max-width:490px) {
+    .hero__nav{
+      bottom: 5%;
+      width: 67%;
+    }
+    .nav__controls{
+      gap: 20px;
+    }
+  }
+}
 </style>

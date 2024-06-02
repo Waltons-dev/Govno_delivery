@@ -26,6 +26,22 @@ const pars8= {text:"Термо узлы и их комплектующие",src:
           <path d="M289 73.3129H0L289 63.7949V73.3129Z" fill="#A78BFA"/>
           <path d="M289 82.8308H0L289 73.3129V82.8308Z" fill="#A78BFA"/>
         </svg>
+        <svg class="catalogue__adapt-svg" width="168" height="55" viewBox="0 0 168 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.3" clip-path="url(#clip0_1_1529)">
+            <path d="M196.5 9.75076H-22.5L196.5 0.232788V9.75076Z" fill="#A78BFA"/>
+            <path d="M201.5 18.6471H-27.5L201.5 9.12915V18.6471Z" fill="#A78BFA"/>
+            <path d="M206.5 27.5436H-32.5L206.5 18.0256V27.5436Z" fill="#A78BFA"/>
+            <path d="M211.5 36.44H-37.5L211.5 26.922V36.44Z" fill="#A78BFA"/>
+            <path d="M216.5 45.3363H-42.5L216.5 35.8184V45.3363Z" fill="#A78BFA"/>
+            <path d="M221.5 54.2328H-47.5L221.5 44.7148V54.2328Z" fill="#A78BFA"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1_1529">
+              <rect width="174" height="54" fill="white" transform="translate(0 0.232788)"/>
+            </clipPath>
+          </defs>
+        </svg>
+
       </div>
       <div class="catalogue__body">
         <div class="catalogue__body-container">
@@ -44,6 +60,9 @@ const pars8= {text:"Термо узлы и их комплектующие",src:
 </template>
 
 <style scoped>
+.catalogue__adapt-svg{
+  display: none;
+}
 .catalogue{
   width: 75%;
 }
@@ -70,5 +89,27 @@ const pars8= {text:"Термо узлы и их комплектующие",src:
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
+}
+@media (max-width: 1296px){
+  .catalogue{
+    width: 100%;
+  }
+}
+@media (max-width: 769px){
+  .catalogue__heading{
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 15px ;
+  }
+  .catalogue__svg{
+    display: none;
+  }
+  .catalogue__adapt-svg{
+    display: block;
+  }
+  .catalogue__body-container{
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    grid-gap:10px
+  }
 }
 </style>

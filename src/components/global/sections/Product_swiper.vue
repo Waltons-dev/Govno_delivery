@@ -61,13 +61,8 @@ const sw_name= defineProps(["swiper_name"])
 }
 li{
   list-style: none;
-  //max-width: 344px;
 }
-._container{
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
+
 .swiper__container{
   display: flex;
   flex-direction: column;
@@ -90,14 +85,40 @@ li{
   width: 88px;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 .swiper__button{
   background-color: white;
   cursor: pointer;
 }
+.swiper__button:hover{
+  opacity: 0.5;
+  transition-duration: 0.3s;
+}
 .swiper__body{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(344px, 1fr));
   grid-gap: 12px;
+  padding: 0;
 }
+@media (max-width: 769px) {
+  .swiper__container{
+    gap: 0;
+  }
+  .swiper__body {
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    grid-gap: 10px;
+  }
+  .swiper__header{
+    min-height: 54px;
+  }
+  .swiper__heading{
+    margin: 15px 18px;
+    font-size: 18px;
+  }
+  .swiper__header-buttons{
+    margin: 15px;
+  }
+}
+
 </style>

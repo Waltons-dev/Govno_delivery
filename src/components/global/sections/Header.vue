@@ -176,6 +176,9 @@ const logo = "src/public/logo.png";
   }
   .header{
     height: 45px;
+    position: sticky;
+    top: 0;
+    z-index: 8;
   }
   .header__burger-logo{
     display: flex;
@@ -228,7 +231,7 @@ const logo = "src/public/logo.png";
     list-style-type: none;
     transform: translateX(-103%);
     transition: .3s;
-    height: 100%;
+    height: 100vh;
     width: 50%;
   }
   @media (max-width: 600px) {

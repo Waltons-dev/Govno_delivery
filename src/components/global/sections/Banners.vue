@@ -17,11 +17,6 @@ const src2="src/public/banner2.png"
 .banner{
   margin-bottom: 40px;
 }
-._container{
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
 .banner__container{
   display: flex;
   gap: 20px;

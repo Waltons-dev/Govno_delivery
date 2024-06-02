@@ -10,7 +10,6 @@ const props = defineProps(["src","name","vendor","resource","price","hit","disco
         <span v-if="hit" id="card__hit">ХИТ</span>
         <span v-if="discount" id="card__discount">{{discount}}</span>
       </div>
-
       <p class="card__name">{{name}}</p>
       <div class="card__info">
         <span class="info-item info-main-text">Артикул:<span class="info-sub-text">{{vendor}}</span></span>
@@ -53,6 +52,7 @@ const props = defineProps(["src","name","vendor","resource","price","hit","disco
   border-radius: 2px;
   border: 1px solid #D7D7D766;
   background-color: white;
+  padding: 10px;
 }
 .card__image{
   align-self: center;
@@ -101,7 +101,7 @@ const props = defineProps(["src","name","vendor","resource","price","hit","disco
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin: 0 20px;
+  margin: 0;
 }
 .info-item{
   display: flex;
@@ -154,7 +154,36 @@ const props = defineProps(["src","name","vendor","resource","price","hit","disco
   border: none;
   cursor: pointer;
 }
+@media (max-width: 769px) {
+  .card{
+    gap: 15px;
+  }
+  .card__image{
+    max-width: 125px;
+    max-height: 86%;
+    margin: 10px 10px 0 10px;
+  }
+  .card__additional_info{
+    margin-top: 0;
+  }
+  .card__name{
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 700;
+  }
+  .info-main-text{
+    font-size: 10px;
+  }
+  .card__price{
+    margin: 0;
+  }
+  #card__hit,#card__discount{
+    background-color: #A78BFA;
+    max-width: 37px;
+    max-height: 18px;
+  }
+  .add-delete-button{
+    display: none;
+  }
+}
 </style>
-<script>
-
-</script>

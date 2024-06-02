@@ -15,8 +15,7 @@ const props = defineProps(["text","src"])
 .catalogue__card{
   background-color: white;
   text-decoration: none;
-  transition-property: all;
-  transition: all ease 0.6s;
+  transition: all ease 0.4s;
 }
 .catalogue__card:hover{
   background-color: #A78BFA;
@@ -41,8 +40,22 @@ const props = defineProps(["text","src"])
 .catalogue__text{
   font-size: 18px;
   font-weight: 600;
-  line-height: 21.6px;
+  line-height: 21px;
   color: #111010;
   text-align: center;
+}
+@media (max-width: 769px){
+  .catalogue__text{
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 700;
+  }
+  .catalogue__container{
+    min-height: 100px;
+  }
+  .catalogue__img{
+    max-width: 48px;
+    max-height: 48px;
+  }
 }
 </style>
